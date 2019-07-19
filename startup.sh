@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 set -Eeuo pipefail
 
 # Update this as the file changes.  Please be sure to agree to the EULA
@@ -22,14 +22,11 @@ function copy_config() {
 
    # if the file exists in the config folder then copy the config
    if [ -f config/$filename ]; then
-      echo "executing cp config/$filename $filename"
       cp config/$filename $filename
 
    # if there is a default config then copy that to both locations
    elif [ -f $filename.defaults ]; then
-      echo "cp $filename.defaults $filename"
       cp $filename.defaults $filename
-      echo "cp $filename.defaults config/$filename"
       cp $filename.defaults config/$filename
    fi
 }
