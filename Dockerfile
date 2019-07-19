@@ -10,7 +10,7 @@ CMD ["/sbin/my_init"]
 
 # update packages and install dependencies
 RUN apt-get update \
-    && apt-get -y install unzip libcurl4 curl nano \
+    && apt-get -y install unzip libcurl4 curl nano openssl \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
