@@ -39,8 +39,8 @@ copy_config permissions.json
 # since (for Windows at least) we cannot currently mount the worlds
 # directory directly, we need to copy the world data over at startup.
 # copy recursively without overwriting existing files.
-echo "Importing any worlds present in ./import/worlds..."
-cp -r -n import/worlds/* worlds/ || true
+# echo "Importing any worlds present in ./import/worlds..."
+# cp -r -n import/worlds/* worlds/ || true
 
 if [ -f "bedrock_server" ]; then
    echo "Executing server"
