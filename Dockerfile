@@ -23,11 +23,11 @@ COPY ./startup.sh .
 
 RUN chmod +x startup.sh \
     && mkdir -p bedrock_server/worlds \
-    && mkdir -p bedrock_server/config \
-    && chown -R bedrock:bedrock .
+    && mkdir -p bedrock_server/config
+RUN chown -R bedrock:bedrock .
 
 # If you enable the USER below, there will be permission issues with shared volumes
-USER bedrock
+# USER bedrock
 
 # create volumes for settings that need to be persisted.
 VOLUME /home/bedrock/bedrock_server/worlds /home/bedrock/bedrock_server/config

@@ -31,6 +31,10 @@ function copy_config() {
    fi
 }
 
+pwd
+
+ls -la
+
 copy_config server.properties
 copy_config ops.json
 copy_config whitelist.json
